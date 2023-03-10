@@ -1,9 +1,12 @@
 import axios from "axios";
 import blank_profile from "../assets/blank_profile.png";
+import { useWilders } from "../contexts/WildersContext";
 import Skill from "./Skill";
 import "./WilderCard.css";
 
-const WilderCard = ({ name, skills, id, fetchData }) => {
+const WilderCard = ({ name, skills, id }) => {
+  const { fetchData } = useWilders();
+
   const handleDeleteClick = async () => {
     // 1) Faire l'appel HTTP qui supprime un Wilder
     await axios.delete(`http://localhost:5000/api/wilder/${id}`);

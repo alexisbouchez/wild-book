@@ -1,7 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
+import { useWilders } from "../contexts/WildersContext";
 
-export default function AddWilderForm({ fetchData }) {
+export default function AddWilderForm() {
+  const { fetchData } = useWilders();
   const [name, setName] = useState("");
 
   return (

@@ -1,7 +1,10 @@
 import WilderCard from "./WilderCard";
 import "./WildersGrid.css";
+import { useWilders } from "../contexts/WildersContext";
 
-export default function WildersGrid({ wilders, fetchData }) {
+export default function WildersGrid() {
+  const { wilders } = useWilders();
+
   return (
     <main className="container">
       <h2>Wilders</h2>
@@ -12,7 +15,6 @@ export default function WildersGrid({ wilders, fetchData }) {
             name={wilder.name}
             id={wilder.id}
             skills={wilder.skills}
-            fetchData={fetchData}
           />
         ))}
       </section>
