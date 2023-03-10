@@ -1,4 +1,5 @@
 import blank_profile from "../assets/blank_profile.png";
+import Skill from "./Skill";
 import "./WilderCard.css";
 
 const WilderCard = ({ name, city, skills }) => {
@@ -11,14 +12,9 @@ const WilderCard = ({ name, city, skills }) => {
       <p>{city}</p>
       <h4>Wild Skills</h4>
       <ul className="skills">
-        {skills.map((skill) => {
-          return (
-            <li key={skill.title}>
-              {skill.title}
-              <span className="votes">{skill.votes}</span>
-            </li>
-          );
-        })}
+        {skills.map((skill, index) => (
+          <Skill key={index} {...skill} />
+        ))}
       </ul>
     </article>
   );

@@ -36,3 +36,14 @@ p {
   margin-right: auto;
   padding: 24px;
 }
+
+.button {
+  /* Reset text link default */
+  text-decoration: none;
+
+  background-color: #f76c6c;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  display: inline-block;
+}
