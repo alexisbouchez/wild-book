@@ -1,10 +1,10 @@
 import "./Skill.css";
 
-export default function Skill({ title, votes }) {
+export default function Skill({ name }) {
   return (
     <li>
-      {title}
-      <span className="votes">{votes}</span>
+      {name}
+      {/* <span className="votes">{votes}</span> */}
     </li>
   );
 }
